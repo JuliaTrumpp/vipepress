@@ -1,0 +1,154 @@
+// Header
+
+.header {
+    display: flex;
+    padding: 30px;
+}
+
+.header-item {
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.clickable-header-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logoDiv {
+    margin-left: 25px;
+    display: flex;
+}
+
+.logoName {
+    font-size: 15px;
+}
+
+// body
+
+
+a {
+    text-decoration: none;
+        color: black;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.article-section, .reddit-section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.articleInfo, .redditComments {
+    width: 60%;
+    padding: 20px;
+    margin-left: 2%;
+}
+
+.articleSentiment, .redditSentiment {
+    width: 40%;
+    padding: 20px;
+}
+
+.articleTitle {
+    text-align: center;
+}
+
+
+.pie-chart {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--color) var(--percentage), #ecf0f1 var(--percentage));
+    position: relative;
+    margin-top: 5%;
+    margin-left: 9%;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+
+.pie-chart::before {
+    content: attr(data-score);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.articleInfo p strong, .redditComments p strong {
+    font-weight: bold;
+}
+
+.redditPostsDiv {
+    background-color: #f8f9fa;
+    border: 1px solid #e3e6e8;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.author {
+    color: #1a1a1b;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title {
+    color: #1c1c1c;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.postContent {
+    color: #7c7c7c;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+.article-button-section {
+    padding: 20px;
+    margin-left: 2%;}
+
+
+.save-article-button {
+    background-color: white; /* Weißer Hintergrund */
+    color: black; /* Schwarze Schrift */
+    border: 2px solid black; /* Schwarzer Rand */
+    padding: 10px 20px; /* Abstand innen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    cursor: pointer; /* Zeigt den Maus-Cursor als Pointer an */
+    transition: background-color 0.3s, color 0.3s; /* Sanfte Übergänge für Farben */
+}
+
+.save-article-button:hover {
+    background-color: black; /* Schwarzer Hintergrund bei Hover */
+    color: white; /* Weiße Schrift bei Hover */
+}

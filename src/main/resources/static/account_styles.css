@@ -1,0 +1,78 @@
+
+
+.header {
+    display: flex;
+    // padding: 30px;
+}
+
+.header-item {
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.clickable-header-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logoDiv {
+    margin-left: 25px;
+    display: flex;
+}
+
+.logoName {
+    font-size: 15px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.right-column {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+ul {
+    padding: 0;
+    list-style-position: inside;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.section-content-link {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.section-content-link:hover {
+    text-decoration: underline;
+}
+

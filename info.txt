@@ -1,0 +1,9 @@
+zugangsdaten reddit:
+
+julias studenten-e-mail, passwort: juliahsrm
+
+
+todo:
+
+- htmx benutzen für header
+- siehe alle todos die verteilt sind

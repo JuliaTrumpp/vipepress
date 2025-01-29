@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Homepage</title>
+    <link rel="stylesheet" href="/account_styles.css">
+</head>
+
+<header class="header">
+    <div class="logoDiv">
+        <p class="logoName">VibePress</p>
+        <a th:href="@{/}"><img th:src="@{/images/logo.png}" class="logo" alt="Logo" width="45" height="45"/></a>
+        <p class="header-item" th:text="${date}">Datum</p>
+        <a th:href="@{/account/Julia}"><p class="header-item clickable-header-item">Account</p></a>
+        <p class="header-item clickable-header-item">Settings</p>
+    </div>
+    <div class="headerWords"></div>
+</header>
+
+<body>
+<h2 th:text="${userName}" class="title">Name des Users</h2>
+<div class="container">
+    <div class="left-column">
+        <h4>Deine Gespeicherten Artikel</h4>
+        <ul>
+            <div th:each="article : ${savedArticles}">
+                <a class="section-content-link" th:href="@{/article/{articleId}(articleId=${article.title})}">
+                    <li class="section-content-link" th:text="${article.title}"></li>
+                </a>
+            </div>
+        </ul>
+    </div>
+
+    <div class="right-column">
+        <h4>Deine Gespeicherten Quellen</h4>
+        <ul>
+            <div th:each="source : ${savedSources}">
+                <li class="section-content-link" th:text="${source}"></li>
+            </div>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+

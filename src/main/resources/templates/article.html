@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meine Homepage</title>
+        <link rel="stylesheet" href="/article_styles.css">
+    </head>
+    <header class="header">
+        <div class="logoDiv">
+            <p class="logoName">VibePress</p>
+            <a th:href="@{/}"><img th:src="@{/images/logo.png}" class="logo" alt="Logo" width="45" height="45"/></a>
+            <p class="header-item" th:text="${date}">Datum</p>
+            <a th:href="@{/account/Julia}"><p class="header-item clickable-header-item">Account</p></a>
+            <p class="header-item clickable-header-item">Settings</p>
+        </div>
+        <div class="headerWords"></div>
+    </header>
+
+    <body>
+        <h1 th:text="${article.title}" class="articleTitle">Name des Artikels</h1>
+        <div class="content">
+            <div class="article-section">
+                <div class="articleInfo">
+                    <p><strong>Author:</strong> <span th:text="${article.author}">Author</span></p>
+                    <p><strong>Description:</strong> <span th:text="${article.description}">Description</span></p>
+                    <p><strong>Published On:</strong> <span th:text="${article.publishedOn}">Published On</span></p>
+                    <p><strong>Source:</strong> <span th:text="${article.source}">Source</span></p>
+                    <p th:text="${article.content}">Content</p>
+                </div>
+                <div class="articleSentiment pie-chart"
+                     th:with="score=${article.sentimentScore},
+                      percentage=${(score + 1) / 2 * 100},
+                      color=${score < -0.25 ? '#ff4136' : (score > 0.25 ? '#2ecc40' : '#ffdc00')}"
+                     th:style="'--percentage: ' + ${percentage} + '%; --color: ' + ${color} + ';'">
+                </div>
+            </div>
+
+            <div class="reddit-section">
+                <div class="redditComments">
+                    <h2>Reddit Posts About This Topic</h2>
+                    <div class="redditPostsDiv" th:each="post, stat : ${redditPosts}">
+                        <div class="post-header">
+                            <img class="avatar" th:src="@{/images/profile_pic.webp}" alt="User Avatar">
+                            <p class="author" th:text="${post.author}">post author</p>
+                        </div>
+                        <p class="title" th:text="${post.title}">post title</p>
+                        <p class="postContent" th:text="${post.content}">post selftext</p>
+                    </div>
+                </div>
+                <div class="articleSentiment pie-chart"
+                     th:with="score=${redditPostsSentiment},
+          percentage=${(score + 1) / 2 * 100},
+          color=${score < -0.25 ? '#ff4136' : (score > 0.25 ? '#2ecc40' : '#ffdc00')}"
+                     th:style="'--percentage: ' + ${percentage} + '%; --color: ' + ${color} + ';'">
+                </div>
+            </div>
+
+            <div class="article-button-section">
+                <form action="/saveArticle" method="post">
+                    <input type="hidden" name="articleTitle" th:value="${article.title}" />
+                    <input type="hidden" name="userName" th:value="${userName}" />
+                    <div th:each="post : ${redditPosts}">
+                        <input type="hidden" name="redditLinks" th:value="${post.link}" />
+                    </div>
+                    <button type="submit" class="save-article-button">Save Article</button>
+                </form>
+            </div>
+    </body>
+</html>
