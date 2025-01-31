@@ -130,9 +130,9 @@ The database consists of the following tables:
 Public Endpoints
 - Home Page: /
     - Displays top headlines, option to search articles by query + menu bar options.
-- Article Detail Page: /article/<article-id>
+- Article Detail Page: /article/{article-id}
     - Displays article details, Reddit posts, and sentiment pie charts.
-- Account Account: /account/<name>
+- Account Account: /account/{name}
     - Displays saved articles and favorite sources.
 
 ## Testing 
@@ -179,14 +179,14 @@ Service layer are covered with unit tests to ensure functionality.
 
 ## Future Enhancements
 
-- Sentiment Analysis with Google Language Api
+- Sentiment analysis with Google Language Api
 - Graphs 
   - to visualize articles (by category, length, source, number of quotes on reddit(?))
   - the article's and post's sentiment
 - Country detail page:
   - information and filter articles by category, language, date or source + sort them
   - average sentiment of articles + in country's subreddit
-- Country Comparison
+- Country comparison
   - comparison of Reddit (country's subreddits) and article sentiments (also by category)
   - number of articles (top headlines) + other statistics
 - Save source on article page and account page
