@@ -11,6 +11,7 @@ view detailed article information with related reddit posts and save your favori
     - [General Features](#general-features)
     - [Article Detail Pages](#article-detail-pages)
     - [User Account Page](#user-account-page)
+    - [Demo Video](#demo-video)
 - [Technologies Used](#technologies-used)
     - [Backend](#backend)
     - [Database](#database)
@@ -48,6 +49,10 @@ view detailed article information with related reddit posts and save your favori
 ### User Account Page
 - View your **saved articles**.
 - View your **favorite sources**.
+
+### Demo Video
+To take a look at the current state of the project, you can follow this link to a demo video. https://my.hidrive.com/share/u9t05xiqy2
+Info: This project does not focus on the frontend and it is also still in progress.
 
 ---
 
