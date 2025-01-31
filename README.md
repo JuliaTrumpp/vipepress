@@ -113,8 +113,8 @@ The database consists of the following tables:
 ### Steps
 1. Clone the repository:
    ```bash  
-   git clone <repository-url>  
-   cd <repository-folder>  
+   git clone https://github.com/JuliaTrumpp/vipepress.git  
+   cd article.analysis  
 2. Start the database with Docker:
    ```bash 
    docker-compose up -d
