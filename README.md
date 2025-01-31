@@ -193,11 +193,6 @@ Service layer are covered with unit tests to ensure functionality.
 - Sources detail page:
     - list of last articles, which language/ country
 - Possibility to delete articles/ other data base entries
-- Make the following step and flyway in general work:
-  - Run Flyway migrations:
-      ```bash 
-      ./gradlew flywayMigrate  
-    
 
 
 ## Contributors
