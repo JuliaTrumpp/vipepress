@@ -29,7 +29,6 @@ view detailed article information with related reddit posts and save your favori
     - [Unit Tests](#unit-tests)
 - [Folder Structure](#folder-structure)
 - [Future Enhancements](#future-enhancements)
-- [Possible Problems](#possible-problems)
 - [Contributors](#contributors)
 
 ---
@@ -199,22 +198,6 @@ Service layer are covered with unit tests to ensure functionality.
       ```bash 
       ./gradlew flywayMigrate  
     
-
-## Possible Problems
-
-(This chapter can hopefully be deleted)
-
-- Reddit: Unauthorized Error:
-
-When this error comes ups, apparently the fetchAccessToken() in the RedditApiService class did not word as planned. Now you have to fetch your Reddit Api Token manually.
-
-The easiest way to do this is to use Postman: 
-
-URL: https://www.reddit.com/api/v1/access_token? (Method: POST)
-
-Body: grant_type=password,username=juliatrumpp_hsrm,password=juliahsrm. 
-
-The accessToken (value in the mentioned class) can now be replaced with the "access_token" of the Post-Result.
 
 
 ## Contributors
